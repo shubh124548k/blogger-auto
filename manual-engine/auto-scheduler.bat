@@ -1,4 +1,3 @@
-:loop
-call auto-publish.bat
-timeout /t 900
-goto loop
+@echo off
+cd /d %~dp0
+call auto-publish.bat "ai-auto-post"

@@ -2,20 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/posts/auto-1766901968450/</loc>
-    <lastmod>2025-12-28T06:06:08+00:00</lastmod>
+    <loc>https://example.org/categories/ai/</loc>
+    <lastmod>2025-12-28T12:18:41+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/</loc>
-    <lastmod>2025-12-28T06:06:08+00:00</lastmod>
+    <loc>https://example.org/tags/ai/</loc>
+    <lastmod>2025-12-28T12:18:41+00:00</lastmod>
   </url><url>
-    <loc>https://example.org/posts/</loc>
-    <lastmod>2025-12-28T06:06:08+00:00</lastmod>
-  </url><url>
-    <loc>https://example.org/posts/test-blog/</loc>
-    <lastmod>2025-12-28T08:37:34+05:30</lastmod>
+    <loc>https://example.org/posts/best/</loc>
+    <lastmod>2025-12-28T12:18:41+00:00</lastmod>
   </url><url>
     <loc>https://example.org/categories/</loc>
+    <lastmod>2025-12-28T12:18:41+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/</loc>
+    <lastmod>2025-12-28T12:18:41+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/</loc>
+    <lastmod>2025-12-28T12:18:41+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/seo/</loc>
+    <lastmod>2025-12-28T12:18:41+00:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/</loc>
+    <lastmod>2025-12-28T12:18:41+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/technology/</loc>
+    <lastmod>2025-12-28T12:18:41+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/best-ai-tools-for-business-growth/</loc>
+    <lastmod>2025-12-28T11:56:05+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/technology/</loc>
+    <lastmod>2025-12-28T11:56:05+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/trending/</loc>
+    <lastmod>2025-12-28T11:56:05+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/ai-auto-post/</loc>
+    <lastmod>2025-12-28T11:48:35+00:00</lastmod>
+  </url><url>
+    <loc>https://example.org/posts/auto-1766901968450/</loc>
+    <lastmod>2025-12-28T06:06:08+00:00</lastmod>
   </url>
 </urlset>

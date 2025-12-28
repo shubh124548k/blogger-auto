@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ if .IsHome }}AI Auto Blog{{ else }}{{ .Title }} | AI Auto Blog{{ end }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="{{ if .IsPage }}{{ .Summary }}{{ else }}AI Auto SEO Auto Blog{{ end }}">
+{{ with .Params.tags }}<meta name="keywords" content="{{ range . }}{{ . }}{{ if not (eq . (index $.Params.tags (sub (len $.Params.tags) 1))) }}, {{ end }}{{ end }}">{{ end }}
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Summary }}">
+<meta property="og:url" content="{{ .Permalink }}">
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo">AUTO BLOGGER</div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/posts/">Posts</a>
+    <a href="/categories/">Categories</a>
+  </nav>
+</header>
+
+<main>{{ block "main" . }}{{ end }}</main>
+
+<footer>© 2025 Auto Blogger • AI Engine</footer>
+</body>
+</html>

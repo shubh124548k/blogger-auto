@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on My New Hugo Site</title>
+    <link>https://example.org/categories/ai/</link>
+    <description>Recent content in AI on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Dec 2025 12:18:41 +0000</lastBuildDate>
+    <atom:link href="https://example.org/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best</title>
+      <link>https://example.org/posts/best/</link>
+      <pubDate>Sun, 28 Dec 2025 12:18:41 +0000</pubDate>
+      <guid>https://example.org/posts/best/</guid>
+      <description>&lt;h1 id=&#34;best&#34;&gt;Best&lt;/h1&gt;&#xA;&lt;p&gt;Best is changing the future of the world with automation, AI, cloud and cybersecurity.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-this-topic-is-trending&#34;&gt;Why this topic is trending&lt;/h2&gt;&#xA;&lt;p&gt;AI is exploding worldwide.&lt;/p&gt;&#xA;&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;&#xA;&lt;p&gt;Stay tuned for more AI SEO blogs.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

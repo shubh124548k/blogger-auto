@@ -1,14 +1,10 @@
 # Node
 node_modules
+
+# Build folders (frontend only)
 dist
 dist-ssr
 *.local
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
 
 # Editor
 .vscode/*
@@ -21,7 +17,7 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-# DO NOT IGNORE HUGO OUTPUT
+# FORCE TRACK HUGO OUTPUT
 !hugo-site/public/**
 !hugo-site/content/**
 !hugo-site/layouts/**

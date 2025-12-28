@@ -6,6 +6,35 @@
     <description>Recent content in Tags on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 28 Dec 2025 12:18:41 +0000</lastBuildDate>
     <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://example.org/tags/ai/</link>
+      <pubDate>Sun, 28 Dec 2025 12:18:41 +0000</pubDate>
+      <guid>https://example.org/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SEO</title>
+      <link>https://example.org/tags/seo/</link>
+      <pubDate>Sun, 28 Dec 2025 12:18:41 +0000</pubDate>
+      <guid>https://example.org/tags/seo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>https://example.org/tags/technology/</link>
+      <pubDate>Sun, 28 Dec 2025 12:18:41 +0000</pubDate>
+      <guid>https://example.org/tags/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trending</title>
+      <link>https://example.org/tags/trending/</link>
+      <pubDate>Sun, 28 Dec 2025 11:56:05 +0000</pubDate>
+      <guid>https://example.org/tags/trending/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

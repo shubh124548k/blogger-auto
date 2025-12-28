@@ -1,41 +1,29 @@
-import axios from "axios";
 import fs from "fs";
 import slugify from "slugify";
 
-const trendUrl = "https://trends.google.com/trends/trendingsearches/daily/rss?geo=IN";
+const title = process.argv[2] || "AI Technology Trends 2025";
+const slug = slugify(title,{lower:true});
 
-const res = await axios.get(trendUrl);
-const matches = [...res.data.matchAll(/<title><!\[CDATA\[(.*?)\]\]><\/title>/g)];
-
-matches.shift();
-const topic = matches[Math.floor(Math.random()*matches.length)][1];
-
-const slug = slugify(topic, { lower:true });
-const file = `hugo-site/content/posts/${slug}.md`;
-
-const blog = `---
-title: "${topic}"
+const post = `---
+title: "${title}"
 date: ${new Date().toISOString()}
-categories: ["Trending"]
-tags: ["trending","viral","2025"]
+categories: ["AI"]
+tags: ["AI","Technology","SEO"]
+image: "/images/${slug}.jpg"
+description: "${title} latest AI SEO optimized blog post"
 ---
 
-# ${topic}
+# ${title}
 
-This topic is trending in India.
+${title} is changing the future of the world with automation, AI, cloud and cybersecurity.
 
-## Why This Is Viral
-People are searching this topic massively.
+## Why this topic is trending
+AI is exploding worldwide.
 
-## Best Ways To Earn From This Topic
-1. Blog
-2. YouTube
-3. Affiliate marketing
-4. Dropshipping
-
-## Final Words
-Stay ahead with trending SEO blogs.
+## Conclusion
+Stay tuned for more AI SEO blogs.
 `;
 
-fs.writeFileSync(file, blog);
-console.log("AUTO BLOG CREATED:", file);
+fs.mkdirSync(`../hugo-site/content/posts/${slug}`,{recursive:true});
+fs.writeFileSync(`../hugo-site/content/posts/${slug}/index.md`,post);
+console.log("POST CREATED:",slug);

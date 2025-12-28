@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<section class="hero">
+<h1>Discover Insights That <span>Matter Most</span></h1>
+<p>AI Powered SEO Auto Blogging System</p>
+</section>
+
+<section class="latest">
+<h2>Latest Posts</h2>
+<div class="post-grid">
+{{ range first 12 .Site.RegularPages }}
+<article class="post-card">
+<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+<p>{{ .Summary }}</p>
+</article>
+{{ end }}
+</div>
+</section>
+
+{{ end }}

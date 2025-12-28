@@ -1,9 +1,10 @@
 {{ define "main" }}
 
-<section class="archive">
+<section class="archive category-archive">
   <div class="archive-header">
-    <h1>{{ .Title }}</h1>
-    {{ if .Description }}<p class="archive-description">{{ .Description }}</p>{{ end }}
+    <h1>Category: {{ .Title }}</h1>
+    <p class="category-description">Posts in the <strong>{{ .Title }}</strong> category</p>
+    <p class="post-count">{{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }} found</p>
   </div>
 
   {{ if .Pages }}
@@ -47,7 +48,7 @@
     {{ end }}
   </div>
   {{ else }}
-  <p class="no-posts">No posts found.</p>
+  <p class="no-posts">No posts found in this category.</p>
   {{ end }}
 </section>
 
