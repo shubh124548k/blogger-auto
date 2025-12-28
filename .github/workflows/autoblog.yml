@@ -16,16 +16,13 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install deps
-        run: npm ci --omit=dev
-
-      - name: Run Engine
-        run: node --experimental-specifier-resolution=node engine.js
+      - name: Run Blog Engine
+        run: node engine.js
 
       - name: Commit & Push
         run: |
           git config user.name "auto-blog-bot"
           git config user.email "bot@github.com"
           git add hugo-site/content/posts/
-          git commit -m "auto: new blog post" || echo "No changes"
+          git diff --cached --quiet || git commit -m "auto: generated blog post"
           git push
