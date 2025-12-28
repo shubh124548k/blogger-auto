@@ -1,6 +1,5 @@
-TITLE:
-SLUG:
-CATEGORY:
-TAGS:
+TITLE: AI Will Replace 60% Jobs by 2030
+CATEGORY: Technology
+TAGS: ai, future jobs, automation, tech news
 
-BLOG CONTENT (8000+ words):
+Write a long SEO optimized blog about how Artificial Intelligence will replace jobs, include headings, FAQs, pros and cons, and conclusion.
