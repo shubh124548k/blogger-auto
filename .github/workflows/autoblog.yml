@@ -1,0 +1,30 @@
+name: Auto Blog Engine
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+jobs:
+  autoblog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - run: npm install --omit=dev
+
+      - name: Run Engine
+        run: node engine.js
+
+      - name: Commit & Push
+        run: |
+          git config user.name "auto-blog-bot"
+          git config user.email "bot@github.com"
+          git add hugo-site/content/posts/
+          git commit -m "auto: generated blog post" || echo "No changes"
+          git push
