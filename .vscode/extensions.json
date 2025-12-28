@@ -1,0 +1,7 @@
+{
+  "recommendations": ["esbenp.prettier-vscode", "bradlc.vscode-tailwindcss", "dbaeumer.vscode-eslint"],
+  "css.lint.unknownAtRules": "ignore",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

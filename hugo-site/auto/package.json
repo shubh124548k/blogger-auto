@@ -1,0 +1,20 @@
+{
+  "name": "auto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "fs-extra": "^11.3.3",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.15.0",
+    "rss-parser": "^3.13.0",
+    "slugify": "^1.6.6"
+  }
+}
