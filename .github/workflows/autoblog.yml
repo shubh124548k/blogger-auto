@@ -5,20 +5,26 @@ on:
   schedule:
     - cron: "0 */6 * * *"
 
+permissions:
+  contents: write
+
 jobs:
   autoblog:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repo
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - run: npm install --omit=dev
+      - name: Install Dependencies
+        run: npm install --omit=dev
 
-      - name: Run Engine
+      - name: Run Blog Engine
         run: node engine.js
 
       - name: Commit & Push
@@ -26,5 +32,5 @@ jobs:
           git config user.name "auto-blog-bot"
           git config user.email "bot@github.com"
           git add hugo-site/content/posts/
-          git commit -m "auto: generated blog post" || echo "No changes"
+          git diff --cached --quiet || git commit -m "auto: generated blog post"
           git push
