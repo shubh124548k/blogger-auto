@@ -17,7 +17,8 @@ jobs:
           node-version: 18
 
       - name: Run Blog Engine
-        run: node engine.js
+        run: node engine.mjs
+
 
       - name: Commit & Push
         run: |
