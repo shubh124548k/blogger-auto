@@ -6,58 +6,33 @@ permissions:
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 0-5 * * *"
-    - cron: "*/30 12-17 * * *"
-    - cron: "0 * 6-11 * *"
-    - cron: "0 * 18-23 * *"
+    - cron: "0 */6 * * *"
 
 jobs:
   autoblog:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: hugo-site/auto/package.json
+          node-version: 18
 
       - name: Install dependencies
-        working-directory: hugo-site/auto
-        run: npm ci --omit=dev
-        continue-on-error: false
+        run: npm install --omit=dev
 
-      - name: Run auto blog engine
-        working-directory: hugo-site/auto
+      - name: Run Engine
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
         run: node engine.js
 
-      - name: Check for new posts
-        id: check-posts
+      - name: Commit & Push
         run: |
-          if git status --porcelain | grep -E "hugo-site/content/posts/"; then
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Configure git
-        if: steps.check-posts.outputs.has_changes == 'true'
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "auto-blog-bot"
-
-      - name: Commit and push changes
-        if: steps.check-posts.outputs.has_changes == 'true'
-        run: |
+          git config user.email "action@github.com"
+          git config user.name "auto-blog-bot"
           git add hugo-site/content/posts/
-          git commit -m "chore: auto-generated blog post [ci skip]"
-          git push origin main
+          git diff --cached --quiet || git commit -m "auto: new blog post"
+          git push
